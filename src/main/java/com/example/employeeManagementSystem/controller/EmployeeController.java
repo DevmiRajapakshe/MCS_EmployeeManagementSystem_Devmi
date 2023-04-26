@@ -41,14 +41,19 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/{employeeId}")
-    public ResponseEntity<String> deleteEmployeeRecord(@PathVariable("employeeId") int employeeId) {
+    public ResponseEntity<?> deleteEmployeeRecord(@PathVariable("employeeId") int employeeId) {
         try{
             employeeService.deleteEmployee(employeeId);
-            return new ResponseEntity<>("Success in deleting employee - " + employeeId, HttpStatus.OK);
+            return new ResponseEntity<>( HttpStatus.OK);
         }catch(EmptyResultDataAccessException e){
-            System.out.println("Employee id not available");
-            return null;
+            System.out.println(e);
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
+    }
+
+    @PutMapping("")
+    public ResponseEntity<EmployeeDto> updateEmployeeDetails(@RequestBody EmployeeDto employeeDto){
+        return new ResponseEntity<>(employeeService.updateEmployee(employeeDto),HttpStatus.OK);
     }
 
 }

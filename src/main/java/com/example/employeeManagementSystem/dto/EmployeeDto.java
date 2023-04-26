@@ -3,13 +3,16 @@ package com.example.employeeManagementSystem.dto;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+import java.util.Date;
+
 @JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class EmployeeDto {
 
     private int employeeId;
     private String firstName;
     private String lastName;
-    private int age;
+    private Date dateOfBirth;
+    private Double salary;
     private String address;
     private String jobTitle;
     private String email;
@@ -37,14 +40,6 @@ public class EmployeeDto {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getAddress() {
@@ -77,5 +72,21 @@ public class EmployeeDto {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
     }
 }

@@ -61,4 +61,13 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteEmployee(int employeeId) {
         employeeRepository.deleteById(employeeId);
     }
+
+    @Override
+    public EmployeeDto updateEmployee(EmployeeDto employeeDto) {
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDto, employee);
+        employee = employeeRepository.save(employee);
+        BeanUtils.copyProperties(employee, employeeDto);
+        return employeeDto;
+    }
 }
