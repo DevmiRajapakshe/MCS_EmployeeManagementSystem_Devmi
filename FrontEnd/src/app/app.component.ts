@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from './Employee'
+import { Employee } from './Employee';
 import { EmployeeService } from './employee.service';
 import { Subscriber } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -43,7 +43,6 @@ export class AppComponent implements OnInit{
     },
     (err : HttpErrorResponse) => {
       alert(err.message);
-      addDetails.reset();
     }
   );
 }
