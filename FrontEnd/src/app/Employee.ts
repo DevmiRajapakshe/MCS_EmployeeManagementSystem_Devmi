@@ -1,5 +1,6 @@
 export class Employee{
 
+  employee_id: number;
   first_name: string;
   last_name: string;
   date_of_birth: Date;
@@ -10,6 +11,7 @@ export class Employee{
   phone:string;
 
   constructor() {
+    this.employee_id = 0;
     this.first_name = '';
     this.last_name = '';
     this.date_of_birth = new Date();
