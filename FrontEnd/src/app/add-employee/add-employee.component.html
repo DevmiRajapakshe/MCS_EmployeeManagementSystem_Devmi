@@ -1,40 +1,40 @@
 <div class="prop">
   <div class="row">
-    <div class="col-md-6 offset-md-3 form-container">
+    <div class="offset-md-3 col-md-6 form-container">
       <h2 class="text-center" style="color: white">Add Employee Details</h2>
       <br />
       <form
+        id="addForm"
         #addDetails="ngForm"
         ngNativeValidate
         (ngSubmit)="onSubmit(addDetails)"
-        id="addForm"
       >
         <div class="row">
           <div class="form-group col-md-6">
             <label for="firstName" style="color: white">First Name</label>
             <input
               type="text"
+              title="Please enter a valid first name"
               class="form-control"
               id="first_name"
               name="first_name"
               ngModel
               placeholder="Enter first name"
-              pattern="[A-Za-z]+"
-              title="Please enter a valid first name"
+              (keypress)="checkOnlyLetterInputs($event)"
               required
             />
           </div>
           <div class="form-group col-md-6">
             <label for="lastName" style="color: white">Last Name</label>
             <input
-              type="text"
               class="form-control"
+              type="text"
+              ngModel
+              (keypress)="checkOnlyLetterInputs($event)"
+              title="Please enter a valid last name"
               id="last_name"
               name="last_name"
-              ngModel
               placeholder="Enter last name"
-              pattern="[A-Za-z]+"
-              title="Please enter a valid last name"
             />
           </div>
         </div>
@@ -45,6 +45,7 @@
               type="date"
               class="form-control"
               id="date_of_birth"
+              max="{{ getCurrentDate() }}"
               name="date_of_birth"
               ngModel
               placeholder="Enter date of birth"
@@ -54,9 +55,9 @@
           <div class="form-group col-md-6">
             <label for="salary" style="color: white">Salary</label>
             <input
+              id="salary"
               type="number"
               class="form-control"
-              id="salary"
               name="salary"
               ngModel
               placeholder="Enter salary"
@@ -65,7 +66,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="form-group col-md-6">
+          <div class="col-md-6 form-group">
             <label for="address" style="color: white">Address</label>
             <input
               type="text"
@@ -86,7 +87,7 @@
               name="job_title"
               ngModel
               placeholder="Enter job title"
-              pattern="[A-Za-z]+"
+              (keypress)="checkOnlyLetterInputs($event)"
               title="Please enter a valid title"
               required
             />
@@ -116,7 +117,8 @@
               name="phone"
               ngModel
               placeholder="Enter phone number"
-              pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+              pattern="[0-9]{10}"
+              (keypress)="checkOnlyNumberInputs($event)"
               title="Enter valid phone number"
               required
             />
@@ -126,7 +128,7 @@
         <button
           [disabled]="addDetails.invalid"
           type="submit"
-          class="btn btn-primary btn-block custom-btn"
+          class="btn btn-primary custom-btn btn-block"
         >
           Add Employee Details
         </button>

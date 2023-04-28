@@ -9,21 +9,23 @@ import { HttpErrorResponse } from '@angular/common/http';
 @Component({
   selector: 'app-view-employee',
   templateUrl: './view-employee.component.html',
-  styleUrls: ['./view-employee.component.css']
+  styleUrls: ['./view-employee.component.css'],
 })
 export class ViewEmployeeComponent implements OnInit {
-
   public employees: Employee[] = [];
-  public updateEmployee: Employee = new Employee;
+  public updateEmployee: Employee = new Employee();
 
-  constructor(private router: Router, private employeeService: EmployeeService) {
+  constructor(
+    private router: Router,
+    private employeeService: EmployeeService
+  ) {}
 
-  }
-
+  //display employee details everytime the component is initialized
   ngOnInit(): void {
     this.getEmployees();
   }
 
+  //get the details of all the employees
   public getEmployees(): void {
     this.employeeService
       .getEmployeeDetails()
@@ -33,27 +35,30 @@ export class ViewEmployeeComponent implements OnInit {
           console.log(empResponse);
         }),
         catchError((err: HttpErrorResponse) => {
-          alert(err.message);
           console.log(err);
+          alert(err.message);
           throw err;
         })
       )
       .subscribe();
   }
 
-  public updateEmployees(emp : Employee) : void{
+  //update the details of a particular employee
+  public updateEmployees(emp: Employee): void {
     this.employeeService.updateEmployeeDetails(emp).subscribe(
       (response: Employee) => {
         console.log(response);
         this.getEmployees();
       },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
+      (err: HttpErrorResponse) => {
+        alert(err.message);
       }
     );
   }
 
-  editEmployee(emp : Employee) : void{
+  //once the edit employee button is pressed used to specify that the dialog
+  //with the form should be displayed.
+  editEmployee(emp: Employee): void {
     this.updateEmployee = emp;
     const cont = document.getElementById('m-container');
     const button = document.createElement('button');
@@ -62,19 +67,49 @@ export class ViewEmployeeComponent implements OnInit {
     button.setAttribute('data-toggle', 'modal');
     button.setAttribute('data-target', '#editEmployeeModal');
     cont?.appendChild(button);
+    //call the dev element with id editEmployeeModal
     button.click();
   }
 
-  public deleteEmployee(emp : Employee) {
+  //get the current date in the format required
+  getCurrentDate(): string {
+    const date = new Date();
+    const year = date.getFullYear();
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = new Date().toLocaleString('default', { month: '2-digit' });
+    return `${year}-${month}-${day}`;
+  }
+
+  //Delete the details of the particular employee
+  public deleteEmployee(emp: Employee) {
     this.employeeService.deleteEmployeeDetails(emp.employee_id).subscribe(
       (response: void) => {
         console.log(response);
         this.getEmployees();
       },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
+      (err: HttpErrorResponse) => {
+        alert(err.message);
       }
     );
   }
 
+  //allow user to only enter letters
+  checkOnlyLetterInputs(event: any) {
+    const pattern = /[a-zA-Z]/;
+    const input = String.fromCharCode(event.keyCode);
+
+    if (!pattern.test(input)) {
+      event.preventDefault();
+    }
+  }
+
+  //allow user to only enter numbers
+  checkOnlyNumberInputs(event: any) {
+    const pattern = /^[0-9]*$/;
+    const input = String.fromCharCode(event.keyCode);
+
+    if (!pattern.test(input)) {
+      event.preventDefault();
+    }
+  }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8cf3b66f-b839-409d-9cb4-2f264ea25c24" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/EmployeeManagementSystemApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/EmployeeManagementSystemApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/Repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/Repository/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/example/employeeManagementSystem/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/Employee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/Employee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/add-employee/add-employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/employee.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/view-employee/view-employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/proxy.conf.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2P2LyRw81oIUEK58L6YFruCcluY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8cf3b66f-b839-409d-9cb4-2f264ea25c24" name="Changes" comment="" />
+      <created>1682650484740</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682650484740</updated>
+    </task>
+    <servers />
+  </component>
+</project>

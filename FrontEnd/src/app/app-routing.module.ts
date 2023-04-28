@@ -9,10 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   {
-    path: "", component: AddEmployeeComponent
-
+    path: '',
+    component: AddEmployeeComponent,
   },
-  { path: "view", component: ViewEmployeeComponent}
+  { path: 'view', component: ViewEmployeeComponent },
 ];
 
 @NgModule({
@@ -22,10 +22,8 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    BrowserModule
+    BrowserModule,
   ],
-  exports:[
-    RouterModule
-  ]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
