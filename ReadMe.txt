@@ -18,3 +18,16 @@ References :- 	https://getbootstrap.com/docs/4.0/components/forms/
 		https://stackoverflow.com/questions/37750166/bootstrap-grid-with-blank-form-group-col-md-6
 		https://websparrow.org/angular/how-to-add-javascript-file-in-angular-project
 		
+
+The backend is a spring boot application. It is a employee management component that 
+provides it's services to an external application. It handles HTTP requests and responses
+and defines the required API endpoints.
+The front end which is the angular project is used as the external application that uses the services provided. 
+After deploying the backend, the employee management component can be integrated with the
+external application which is the Angular project in our scenario.
+
+The folder named as the FrontEnd contains the angular project. It can be run by using ng serve.
+The backend contains the employee management component which is a spring boot application.
+
+
+
